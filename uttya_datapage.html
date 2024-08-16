@@ -1,0 +1,212 @@
+<html lang="ko"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우땨의 데이터 저장소</title>
+    <link rel="icon" href="https://img.icons8.com/?size=100&amp;id=cJWMeeTIU3eX&amp;format=png&amp;color=000000">
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang&amp;display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.6.2/sql-wasm.js"></script>
+    <style>
+        body {
+            font-family: 'Gowun Batang', serif;
+            text-align: center;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: inline-block;
+            padding: 20px;
+            border: 2px solid #000;
+            border-radius: 8px;
+            background-color: #ffffff;
+            width: 400px;
+            margin-bottom: 30px;
+        }
+        .title {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+        .separator {
+            width: 200px;
+            height: 2px;
+            background-color: #000;
+            margin: 20px auto;
+        }
+        #LATEST_VER {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+        .table-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            margin-bottom: 30px;
+            align-items: flex-start;
+        }
+        .table-wrapper {
+            width: 700px; /* 테이블 고정 가로 사이즈 */
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%; /* 부모의 가로 사이즈에 맞추기 */
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+        caption {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        tr {
+            height: 30px; /* 행의 높이 고정 */
+        }
+        .update-button, .save-button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Gowun Batang', serif;
+            margin: 0 10px;
+        }
+        .update-button:hover, .save-button:hover {
+            background-color: #333;
+        }
+        #file-input {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="title">LATEST<br>VERSION INFO</p>
+        <div class="separator"></div>
+        <p id="LATEST_VER">0.0.0</p>
+    </div>
+
+    <div class="table-container" id="table-container"><div class="table-wrapper" style="margin-right: 10px; margin-left: 0px;"><table><caption>Table 1: VP</caption><thead><tr><th>code</th><th>name</th><th>korname</th><th>filename</th><th>multiversion</th></tr></thead><tbody><tr><td>VPM01</td><td>Alex</td><td>알렉스</td><td>Alex</td><td></td></tr><tr><td>VPM02</td><td>Elliott</td><td>엘리엇</td><td>Elliott</td><td></td></tr><tr><td>VPM03</td><td>Harvey</td><td>하비</td><td>Harvey</td><td>T</td></tr><tr><td>VPM04</td><td>Sam</td><td>샘</td><td>Sam</td><td></td></tr><tr><td>VPM05</td><td>Sebastian</td><td>세바스찬</td><td>Sebastian</td><td>F</td></tr><tr><td>VPM06</td><td>Shane</td><td>셰인</td><td>Shane</td><td></td></tr><tr><td>VPF01</td><td>Haley</td><td>헤일리</td><td>Haley</td><td>F</td></tr><tr><td>VPF02</td><td>Leah</td><td>레아</td><td>Leah</td><td></td></tr><tr><td>VPF03</td><td>Maru</td><td>마루</td><td>Maru</td><td></td></tr><tr><td>VPF04</td><td>Penny</td><td>페니</td><td>Penny</td><td></td></tr><tr><td>VPF05</td><td>Abigail</td><td>애비게일</td><td>Abigail</td><td></td></tr><tr><td>VPF06</td><td>Emily</td><td>에밀리</td><td>Emily</td><td></td></tr></tbody></table></div><div class="table-wrapper" style="margin-left: 10px; margin-right: 0px;"><table><caption>Table 2: VI</caption><thead><tr><th>code</th><th>name</th><th>korname</th><th>filename</th><th>multiversion</th></tr></thead><tbody><tr><td>VIM01</td><td>Lewis</td><td>루이스</td><td>Lewis</td><td></td></tr><tr><td>VIM02</td><td>Pierre</td><td>피에르</td><td>Pierre</td><td>F</td></tr><tr><td>VIM03</td><td>George</td><td>조지</td><td>George</td><td></td></tr><tr><td>VIM04</td><td>Demetrius</td><td>드미트리우스</td><td>Demetrius</td><td></td></tr><tr><td>VIM05</td><td>Gus</td><td>거스</td><td>Gus</td><td></td></tr><tr><td>VIM06</td><td>Kent</td><td>켄트</td><td>Kent</td><td></td></tr><tr><td>VIM07</td><td>Vincent</td><td>빈센트</td><td>Vincent</td><td></td></tr><tr><td>VIM08</td><td>Clint</td><td>클린트</td><td>Clint</td><td></td></tr><tr><td>VIM09</td><td>Willy</td><td>윌리</td><td>Willy</td><td></td></tr><tr><td>VIM10</td><td>Wizard</td><td>마법사</td><td>Wizard</td><td>F</td></tr><tr><td>VIM11</td><td>Linus</td><td>라이너스</td><td>Linus</td><td></td></tr><tr><td>VIF01</td><td>Caroline</td><td>캐롤라인</td><td>Caroline</td><td></td></tr><tr><td>VIF02</td><td>Evelyn</td><td>에블린</td><td>Evelyn</td><td></td></tr><tr><td>VIF03</td><td>Marnie</td><td>마니</td><td>Marnie</td><td></td></tr><tr><td>VIF04</td><td>Jas</td><td>재스</td><td>Jas</td><td></td></tr><tr><td>VIF05</td><td>Robin</td><td>로빈</td><td>Robin</td><td></td></tr><tr><td>VIF06</td><td>Pam</td><td>팸</td><td>Pam</td><td></td></tr><tr><td>VIF07</td><td>Jodi</td><td>조디</td><td>Jodi</td><td></td></tr></tbody></table></div><div class="table-wrapper" style="margin-right: 10px; margin-left: 0px;"><table><caption>Table 3: VHP</caption><thead><tr><th>code</th><th>name</th><th>korname</th><th>filename</th><th>multiversion</th></tr></thead><tbody><tr><td>VHP01</td><td>Dwarf</td><td>드워프</td><td>Dwarf</td><td></td></tr><tr><td>VHP02</td><td>Krobus</td><td>크로버스</td><td>Krobus</td><td></td></tr><tr><td>VHP03</td><td>Sandy</td><td>샌디</td><td>Sandy</td><td></td></tr><tr><td>VHP04</td><td>Leo</td><td>레오</td><td>ParrotBoy</td><td></td></tr></tbody></table></div><div class="table-wrapper" style="margin-left: 10px; margin-right: 0px;"><table><caption>Table 4: VHI</caption><thead><tr><th>code</th><th>name</th><th>korname</th><th>filename</th><th>multiversion</th></tr></thead><tbody><tr><td>VHI01</td><td>Marlon</td><td>말론</td><td>Marlon</td><td></td></tr><tr><td>VHI02</td><td>Gil</td><td>길</td><td>Gil</td><td></td></tr><tr><td>VHI03</td><td>Gunther</td><td>건터</td><td>Gunther</td><td></td></tr><tr><td>VHI04</td><td>Morris</td><td>모리스</td><td>Morris</td><td></td></tr><tr><td>VHI05</td><td>Grandpa</td><td>할아버지</td><td>Grandpa</td><td></td></tr><tr><td>VHI06</td><td>Governor</td><td>도지사</td><td>Governor</td><td></td></tr><tr><td>VHI07</td><td>Henchman</td><td>심복</td><td>Henchman</td><td></td></tr><tr><td>VHI08</td><td>Mr. Qi</td><td>미스터 치</td><td>MrQi</td><td></td></tr><tr><td>VHI09</td><td>Fizz</td><td>피즈</td><td>Fizz</td><td></td></tr><tr><td>VHI10</td><td>Bouncer</td><td>문지기</td><td>Bouncer</td><td></td></tr><tr><td>VHI11</td><td>Bear</td><td>곰</td><td>Bear</td><td></td></tr><tr><td>VHI12</td><td>Birdie</td><td>버디</td><td>Birdie</td><td></td></tr></tbody></table></div><div class="table-wrapper" style="margin-right: 10px; margin-left: 0px;"><table><caption>Table 5: multiversion</caption><thead><tr><th>code</th><th>name</th><th>korname</th><th>filename</th><th>identify</th><th>selectcode</th></tr></thead><tbody><tr><td>VPM03</td><td>Harvey</td><td>하비</td><td>Harvey</td><td>하비 원본</td><td>VPM03_ORG</td></tr><tr><td>VPM03</td><td>Harvey</td><td>하비</td><td>Harvey</td><td>하비 안경 제거</td><td>VPM03_NGL</td></tr></tbody></table></div></div>
+
+    <button class="update-button" onclick="document.getElementById('file-input').click();">파일 업데이트</button>
+    <button class="save-button" onclick="saveChanges();">변경사항 저장</button>
+    <input type="file" id="file-input" accept=".db" onchange="loadFile(event)">
+
+    <script>
+        async function loadFile(event) {
+            const input = event.target;
+            if ('files' in input && input.files.length > 0) {
+                const file = input.files[0];
+                const arrayBuffer = await file.arrayBuffer();
+                const SQL = await initSqlJs({ locateFile: filename => `https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.6.2/${filename}` });
+                const db = new SQL.Database(new Uint8Array(arrayBuffer));
+
+                // Clear existing tables
+                const tableContainer = document.getElementById('table-container');
+                tableContainer.innerHTML = '';
+
+                // 모든 테이블 이름 가져오기
+                const tables = db.exec("SELECT name FROM sqlite_master WHERE type='table';");
+                const tableNames = tables[0].values.map(row => row[0]);
+
+                // 테이블 데이터 로드 및 표시
+                tableNames.forEach((tableName, index) => {
+                    const data = db.exec(`SELECT * FROM ${tableName};`)[0];
+                    if (data) {
+                        displayTable(data, tableName, index + 1, tableNames.length);
+                    }
+                });
+            }
+        }
+
+        function displayTable(data, tableName, index, totalTables) {
+            const container = document.getElementById('table-container');
+
+            // 테이블의 데이터를 읽을 때, 데이터가 존재하지 않는 경우에 대한 예외 처리를 추가합니다.
+            if (!data || data.columns.length === 0 || data.values.length === 0) {
+                console.log(`No data found for table: ${tableName}`);
+                return;
+            }
+
+            const tableWrapper = document.createElement('div');
+            tableWrapper.className = 'table-wrapper';
+
+            const table = document.createElement('table');
+
+            // 테이블 이름 추가
+            const caption = document.createElement('caption');
+            caption.textContent = `Table ${index}: ${tableName}`;
+            table.appendChild(caption);
+
+            const thead = document.createElement('thead');
+            const tbody = document.createElement('tbody');
+
+            // 테이블 헤더 생성
+            const headerRow = document.createElement('tr');
+            data.columns.forEach(headerText => {
+                const th = document.createElement('th');
+                th.textContent = headerText;
+                headerRow.appendChild(th);
+            });
+            thead.appendChild(headerRow);
+
+            // 테이블 바디 생성
+            data.values.forEach(rowData => {
+                const row = document.createElement('tr');
+                rowData.forEach(cellData => {
+                    const td = document.createElement('td');
+                    td.textContent = cellData;
+                    row.appendChild(td);
+                });
+                tbody.appendChild(row);
+            });
+
+            table.appendChild(thead);
+            table.appendChild(tbody);
+            tableWrapper.appendChild(table);
+
+            // 테이블을 2단으로 배치할 때 간격 조정
+            if (index % 2 === 1) {
+                tableWrapper.style.marginRight = '10px'; // 오른쪽 간격
+                tableWrapper.style.marginLeft = '0'; // 왼쪽 간격
+            } else {
+                tableWrapper.style.marginLeft = '10px'; // 왼쪽 간격
+                tableWrapper.style.marginRight = '0'; // 오른쪽 간격
+            }
+
+            // 마지막 테이블이 홀수일 때 중앙 정렬하지 않기
+            if (index === totalTables && index % 2 === 1) {
+                tableWrapper.style.marginLeft = '0';
+            }
+
+            container.appendChild(tableWrapper);
+        }
+
+        function saveChanges() {
+            // HTML 콘텐츠를 문자열로 가져옵니다.
+            const htmlContent = document.documentElement.outerHTML;
+
+            // Blob 객체를 생성하여 파일로 저장합니다.
+            const blob = new Blob([htmlContent], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'uttya_datapage.html'; // 저장할 파일 이름
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+    </script>
+
+
+</body></html>
