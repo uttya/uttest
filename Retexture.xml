@@ -6,59 +6,59 @@
   </Copyright_Holder>
   <data>
     <Classify>
-      <npc chrcode="VPM01" engname="Alex" korname="알렉스" filename="Alex" multiversion="False"/>
-      <npc chrcode="VPM02" engname="Elliott" korname="엘리엇" filename="Elliott" multiversion="False"/>
+      <npc chrcode="VPM01" engname="Alex" korname="알렉스" filename="Alex" multiversion="Nothing"/>
+      <npc chrcode="VPM02" engname="Elliott" korname="엘리엇" filename="Elliott" multiversion="Nothing"/>
       <npc chrcode="VPM03" engname="Harvey" korname="하비" filename="Harvey" multiversion="True"/>
-      <npc chrcode="VPM04" engname="Sam" korname="샘" filename="Sam" multiversion="False"/>
+      <npc chrcode="VPM04" engname="Sam" korname="샘" filename="Sam" multiversion="Nothing"/>
       <npc chrcode="VPM05" engname="Sebastian" korname="세바스찬" filename="Sebastian" multiversion="False"/>
-      <npc chrcode="VPM06" engname="Shane" korname="셰인" filename="Shane" multiversion="False"/>
+      <npc chrcode="VPM06" engname="Shane" korname="셰인" filename="Shane" multiversion="Nothing"/>
       <npc chrcode="VPF01" engname="Haley" korname="헤일리" filename="Haley" multiversion="False"/>
-      <npc chrcode="VPF02" engname="Leah" korname="레아" filename="Leah" multiversion="False"/>
-      <npc chrcode="VPF03" engname="Maru" korname="마루" filename="Maru" multiversion="False"/>
-      <npc chrcode="VPF04" engname="Penny" korname="페니" filename="Penny" multiversion="False"/>
-      <npc chrcode="VPF05" engname="Abigail" korname="애비게일" filename="Abigail" multiversion="False"/>
-      <npc chrcode="VPF06" engname="Emily" korname="에밀리" filename="Emily" multiversion="False"/>
-      <npc chrcode="VIM01" engname="Lewis" korname="루이스" filename="Lewis" multiversion="False"/>
+      <npc chrcode="VPF02" engname="Leah" korname="레아" filename="Leah" multiversion="Nothing"/>
+      <npc chrcode="VPF03" engname="Maru" korname="마루" filename="Maru" multiversion="Nothing"/>
+      <npc chrcode="VPF04" engname="Penny" korname="페니" filename="Penny" multiversion="Nothing"/>
+      <npc chrcode="VPF05" engname="Abigail" korname="애비게일" filename="Abigail" multiversion="Nothing"/>
+      <npc chrcode="VPF06" engname="Emily" korname="에밀리" filename="Emily" multiversion="Nothing"/>
+      <npc chrcode="VIM01" engname="Lewis" korname="루이스" filename="Lewis" multiversion="Nothing"/>
       <npc chrcode="VIM02" engname="Pierre" korname="피에르" filename="Pierre" multiversion="False"/>
-      <npc chrcode="VIM03" engname="George" korname="조지" filename="George" multiversion="False"/>
-      <npc chrcode="VIM04" engname="Demetrius" korname="드미트리우스" filename="Demetrius" multiversion="False"/>
-      <npc chrcode="VIM05" engname="Gus" korname="거스" filename="Gus" multiversion="False"/>
-      <npc chrcode="VIM06" engname="Kent" korname="켄트" filename="Kent" multiversion="False"/>
-      <npc chrcode="VIM07" engname="Vincent" korname="빈센트" filename="Vincent" multiversion="False"/>
-      <npc chrcode="VIM08" engname="Clint" korname="클린트" filename="Clint" multiversion="False"/>
-      <npc chrcode="VIM09" engname="Willy" korname="윌리" filename="Willy" multiversion="False"/>
+      <npc chrcode="VIM03" engname="George" korname="조지" filename="George" multiversion="Nothing"/>
+      <npc chrcode="VIM04" engname="Demetrius" korname="드미트리우스" filename="Demetrius" multiversion="Nothing"/>
+      <npc chrcode="VIM05" engname="Gus" korname="거스" filename="Gus" multiversion="Nothing"/>
+      <npc chrcode="VIM06" engname="Kent" korname="켄트" filename="Kent" multiversion="Nothing"/>
+      <npc chrcode="VIM07" engname="Vincent" korname="빈센트" filename="Vincent" multiversion="Nothing"/>
+      <npc chrcode="VIM08" engname="Clint" korname="클린트" filename="Clint" multiversion="Nothing"/>
+      <npc chrcode="VIM09" engname="Willy" korname="윌리" filename="Willy" multiversion="Nothing"/>
       <npc chrcode="VIM10" engname="Wizard" korname="마법사" filename="Wizard" multiversion="True"/>
-      <npc chrcode="VIM11" engname="Linus" korname="라이너스" filename="Linus" multiversion="False"/>
-      <npc chrcode="VIF01" engname="Caroline" korname="캐롤라인" filename="Caroline" multiversion="False"/>
-      <npc chrcode="VIF02" engname="Evelyn" korname="에블린" filename="Evelyn" multiversion="False"/>
-      <npc chrcode="VIF03" engname="Marnie" korname="마니" filename="Marnie" multiversion="False"/>
-      <npc chrcode="VIF04" engname="Jas" korname="재스" filename="Jas" multiversion="False"/>
-      <npc chrcode="VIF05" engname="Robin" korname="로빈" filename="Robin" multiversion="False"/>
-      <npc chrcode="VIF06" engname="Pam" korname="팸" filename="Pam" multiversion="False"/>
-      <npc chrcode="VIF07" engname="Jodi" korname="조디" filename="Jodi" multiversion="False"/>
-      <npc chrcode="VHP01" engname="Dwarf" korname="드워프" filename="Dwarf" multiversion="False"/>
-      <npc chrcode="VHP02" engname="Krobus" korname="크로버스" filename="Krobus" multiversion="False"/>
-      <npc chrcode="VHP03" engname="Sandy" korname="샌디" filename="Sandy" multiversion="False"/>
-      <npc chrcode="VHP04" engname="Leo" korname="레오" filename="ParrotBoy" multiversion="False"/>
-      <npc chrcode="VHI01" engname="Marlon" korname="말론" filename="Marlon" multiversion="False"/>
-      <npc chrcode="VHI02" engname="Gil" korname="길" filename="Gil" multiversion="False"/>
-      <npc chrcode="VHI03" engname="Gunther" korname="건터" filename="Gunther" multiversion="False"/>
-      <npc chrcode="VHI04" engname="Morris" korname="모리스" filename="Morris" multiversion="False"/>
-      <npc chrcode="VHI05" engname="Grandpa" korname="할아버지" filename="Grandpa" multiversion="False"/>
-      <npc chrcode="VHI06" engname="Governor" korname="도지사" filename="Governor" multiversion="False"/>
-      <npc chrcode="VHI07" engname="Henchman" korname="심복" filename="Henchman" multiversion="False"/>
-      <npc chrcode="VHI08" engname="Mr. Qi" korname="미스터 치" filename="MrQi" multiversion="False"/>
-      <npc chrcode="VHI09" engname="Fizz" korname="피즈" filename="Fizz" multiversion="False"/>
-      <npc chrcode="VHI10" engname="Bouncer" korname="문지기" filename="Bouncer" multiversion="False"/>
-      <npc chrcode="VHI11" engname="Bear" korname="곰" filename="Bear" multiversion="False"/>
-      <npc chrcode="VHI12" engname="Birdie" korname="버디" filename="Birdie" multiversion="False"/>
+      <npc chrcode="VIM11" engname="Linus" korname="라이너스" filename="Linus" multiversion="Nothing"/>
+      <npc chrcode="VIF01" engname="Caroline" korname="캐롤라인" filename="Caroline" multiversion="Nothing"/>
+      <npc chrcode="VIF02" engname="Evelyn" korname="에블린" filename="Evelyn" multiversion="Nothing"/>
+      <npc chrcode="VIF03" engname="Marnie" korname="마니" filename="Marnie" multiversion="Nothing"/>
+      <npc chrcode="VIF04" engname="Jas" korname="재스" filename="Jas" multiversion="Nothing"/>
+      <npc chrcode="VIF05" engname="Robin" korname="로빈" filename="Robin" multiversion="Nothing"/>
+      <npc chrcode="VIF06" engname="Pam" korname="팸" filename="Pam" multiversion="Nothing"/>
+      <npc chrcode="VIF07" engname="Jodi" korname="조디" filename="Jodi" multiversion="Nothing"/>
+      <npc chrcode="VHP01" engname="Dwarf" korname="드워프" filename="Dwarf" multiversion="Nothing"/>
+      <npc chrcode="VHP02" engname="Krobus" korname="크로버스" filename="Krobus" multiversion="Nothing"/>
+      <npc chrcode="VHP03" engname="Sandy" korname="샌디" filename="Sandy" multiversion="Nothing"/>
+      <npc chrcode="VHP04" engname="Leo" korname="레오" filename="ParrotBoy" multiversion="Nothing"/>
+      <npc chrcode="VHI01" engname="Marlon" korname="말론" filename="Marlon" multiversion="Nothing"/>
+      <npc chrcode="VHI02" engname="Gil" korname="길" filename="Gil" multiversion="Nothing"/>
+      <npc chrcode="VHI03" engname="Gunther" korname="건터" filename="Gunther" multiversion="Nothing"/>
+      <npc chrcode="VHI04" engname="Morris" korname="모리스" filename="Morris" multiversion="Nothing"/>
+      <npc chrcode="VHI05" engname="Grandpa" korname="할아버지" filename="Grandpa" multiversion="Nothing"/>
+      <npc chrcode="VHI06" engname="Governor" korname="도지사" filename="Governor" multiversion="Nothing"/>
+      <npc chrcode="VHI07" engname="Henchman" korname="심복" filename="Henchman" multiversion="Nothing"/>
+      <npc chrcode="VHI08" engname="Mr. Qi" korname="미스터 치" filename="MrQi" multiversion="Nothing"/>
+      <npc chrcode="VHI09" engname="Fizz" korname="피즈" filename="Fizz" multiversion="Nothing"/>
+      <npc chrcode="VHI10" engname="Bouncer" korname="문지기" filename="Bouncer" multiversion="Nothing"/>
+      <npc chrcode="VHI11" engname="Bear" korname="곰" filename="Bear" multiversion="Nothing"/>
+      <npc chrcode="VHI12" engname="Birdie" korname="버디" filename="Birdie" multiversion="Nothing"/>
     </Classify>
-    <Multi>
+    <multi>
       <multiversion chrcode="VPM03" engname="Harvey" korname="하비" filename="Harvey" identify="하비 원본" selectcode="VPM03_ORG"/>
       <multiversion chrcode="VPM03" engname="Harvey" korname="하비" filename="Harvey" identify="하비 안경 제거" selectcode="VPM03_NGL"/>
       <multiversion chrcode="VIM10" engname="Wizard" korname="마법사" filename="Wizard" identify="마법사 원본" selectcode="VIM10_ORG"/>
       <multiversion chrcode="VIM10" engname="Wizard" korname="마법사" filename="Wizard" identify="마법사 결확" selectcode="VIM10_LFL"/>
-    </Multi>
+    </multi>
   </data>
   <Artwork>
     <Character chrcode="VIM10_ORG">
